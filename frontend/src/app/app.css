@@ -1,0 +1,10 @@
+/* app.component.scss */
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+app-main-content {
+    flex: 1 0 auto; /* Faz o conteúdo principal crescer e empurrar o footer para baixo */
+}

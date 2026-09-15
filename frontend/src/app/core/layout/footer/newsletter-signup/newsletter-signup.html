@@ -1,0 +1,22 @@
+<!-- newsletter-signup.component.html -->
+<div class="newsletter">
+    <h3>Assine nossa Newsletter</h3>
+    <p>Receba planos de leitura e dicas exclusivas.</p>
+    <form (ngSubmit)="onSubmit()" #newsletterForm="ngForm">
+        <div class="form-group">
+            <input
+                type="email"
+                name="email"
+                [(ngModel)]="email"
+                placeholder="Seu melhor e-mail"
+                required
+                email
+                #emailInput="ngModel"
+            >
+            <button type="submit" [disabled]="newsletterForm.invalid">Inscrever</button>
+        </div>
+        <small *ngIf="emailInput.invalid && emailInput.touched" class="error">
+            Por favor, insira um e-mail válido.
+        </small>
+    </form>
+</div>
