@@ -1,0 +1,18 @@
+<section class="page-container detail-page">
+  @if (plano; as leitura) {
+    <header class="detail-heading">
+      <p class="detail-heading__eyebrow">Plano de leitura</p>
+      <h1>{{ leitura.titulo }}</h1>
+    </header>
+    <section class="future-content" aria-labelledby="books-heading">
+      <h2 id="books-heading">Livros do plano</h2>
+      <p>Em breve, você encontrará aqui a seleção detalhada de livros deste plano.</p>
+    </section>
+  } @else {
+    <section class="not-found">
+      <h1>Plano não encontrado</h1>
+      <p>Não encontramos esse plano de leitura.</p>
+      <a routerLink="/planos">Explorar planos de leitura</a>
+    </section>
+  }
+</section>

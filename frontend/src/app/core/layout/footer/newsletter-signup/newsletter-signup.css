@@ -1,4 +1,4 @@
-// newsletter-signup.component.scss
+/* Newsletter signup form */
 .newsletter {
     h3 {
         font-size: 1.1rem;
@@ -6,7 +6,7 @@
     }
     p {
         font-size: 0.9rem;
-        color: #6c757d;
+        color: var(--color-text-secondary);
         margin-bottom: 1rem;
     }
     .form-group {
@@ -15,20 +15,20 @@
         input {
             flex: 1;
             padding: 0.6rem 1rem;
-            border: 1px solid #ced4da;
-            border-radius: 0.25rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-button);
             font-size: 0.9rem;
         }
         button {
             padding: 0.6rem 1.5rem;
-            background-color: #0056b3;
-            color: #fff;
+            background-color: var(--color-accent);
+            color: var(--color-surface);
             border: none;
-            border-radius: 0.25rem;
+            border-radius: var(--radius-button);
             cursor: pointer;
             font-weight: 500;
             &:hover {
-                background-color: #004494;
+                background-color: var(--color-accent-hover);
             }
             &:disabled {
                 opacity: 0.6;

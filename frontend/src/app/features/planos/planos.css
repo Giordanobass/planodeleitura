@@ -1,0 +1,30 @@
+.plans-page {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.page-heading {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.page-heading__eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page-heading h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+}
+
+.page-heading > p:last-child {
+  margin: 0.75rem 0 0;
+  color: var(--color-text-secondary);
+}

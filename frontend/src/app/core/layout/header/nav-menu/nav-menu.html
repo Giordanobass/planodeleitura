@@ -1,10 +1,12 @@
 <!-- nav-menu.component.html -->
 <nav aria-label="Menu principal">
     <ul class="nav-list">
-        <li *ngFor="let item of menuItems">
-            <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        @for (item of menuItems; track item.route) {
+        <li>
+            <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: item.route === '/'}">
                 {{ item.label }}
             </a>
         </li>
+        }
     </ul>
 </nav>

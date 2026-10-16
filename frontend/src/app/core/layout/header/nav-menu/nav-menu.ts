@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NgFor } from '@angular/common';
 
 interface MenuItem {
     label: string;
@@ -9,17 +8,18 @@ interface MenuItem {
 
 @Component({
     selector: 'app-nav-menu',
-    standalone: true,                        // ← necessário
-    imports: [RouterLink, RouterLinkActive, NgFor], // ← importa as diretivas
+    standalone: true,
+    imports: [RouterLink, RouterLinkActive],
     templateUrl: './nav-menu.html',
-    styleUrls: ['./nav-menu.css']            // ou styleUrl (singular)
+    styleUrl: './nav-menu.css',
 })
 export class NavMenu {
-    menuItems: MenuItem[] = [
+    readonly menuItems: MenuItem[] = [
         { label: 'Início', route: '/' },
         { label: 'Artigos', route: '/artigos' },
         { label: 'Podcast', route: '/podcast' },
         { label: 'Planos de Leitura', route: '/planos' },
         { label: 'Sobre', route: '/sobre' },
+        { label: 'Contato', route: '/contato' },
     ];
 }

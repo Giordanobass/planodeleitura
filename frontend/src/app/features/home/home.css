@@ -1,0 +1,52 @@
+.hero {
+  display: grid;
+  min-height: 320px;
+  place-items: center;
+  padding: 4rem 1.5rem;
+  background: var(--color-bg);
+  text-align: center;
+}
+
+.hero__content {
+  max-width: 760px;
+}
+
+.hero__eyebrow,
+.section-heading__eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  margin: 1.25rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+}
+
+.home-plans {
+  padding-top: 3.5rem;
+  padding-bottom: 4rem;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+}
