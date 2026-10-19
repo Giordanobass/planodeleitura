@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { PlanoGridComponent } from '../planos/plano-grid';
-import { PLANOS_LEITURA } from '../planos/planos.data';
+import { ComboGridComponent } from '../galeria/combo-grid';
+import { COMBOS_LIVROS } from '../galeria/combos.data';
 
 @Component({
   selector: 'app-home',
-  imports: [PlanoGridComponent],
+  imports: [ComboGridComponent],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class HomeComponent {
-  readonly planos = PLANOS_LEITURA;
+  readonly combos = COMBOS_LIVROS;
 }

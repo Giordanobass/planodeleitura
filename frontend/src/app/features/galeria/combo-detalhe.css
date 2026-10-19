@@ -1,0 +1,126 @@
+.combo-detail {
+  min-height: 50vh;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.combo-detail__heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.combo-detail__heading > p {
+  margin: 0 0 0.5rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.combo-detail__heading h1,
+.combo-not-found h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+}
+
+.book-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.book-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.book-item__cover {
+  display: block;
+  flex: 0 0 200px;
+  width: 200px;
+  height: 290px;
+  border-radius: 4px;
+  background: var(--color-bg);
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgb(44 44 44 / 15%);
+}
+
+.book-item__content {
+  min-width: 0;
+}
+
+.book-item__content h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
+.book-item__author {
+  margin: 0.5rem 0 1rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.book-item__summary {
+  margin: 0 0 1.25rem;
+  line-height: 1.75;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-button);
+  background: transparent;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.buy-button:hover,
+.buy-button:focus-visible {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.combo-not-found {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.combo-not-found p {
+  color: var(--color-text-secondary);
+}
+
+.combo-not-found a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .book-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .book-item__cover {
+    width: min(200px, 100%);
+    flex-basis: auto;
+    align-self: center;
+  }
+
+  .book-item__content h2 {
+    font-size: 1.5rem;
+  }
+}

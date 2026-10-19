@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { PlanoGridComponent } from './plano-grid';
-import { PLANOS_LEITURA } from './planos.data';
+import { PlanoTempo } from './plano-tempo';
+import { PLANOS_TEMPO } from './planos-tempo.data';
 
 @Component({
   selector: 'app-planos',
-  imports: [PlanoGridComponent],
   templateUrl: './planos.html',
   styleUrl: './planos.css',
 })
 export class PlanosComponent {
-  readonly planos = PLANOS_LEITURA;
+  readonly planos: PlanoTempo[] = PLANOS_TEMPO;
 }

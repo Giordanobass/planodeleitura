@@ -1,0 +1,32 @@
+<section class="page-container about-page">
+  <header class="about-heading">
+    <p>Por que fazemos isso</p>
+    <h1>Sobre o Plano de Leitura</h1>
+  </header>
+
+  <section class="mission-section">
+    <h2>Nossa missão</h2>
+    <p>
+      Acreditamos que um bom livro pode abrir caminhos para novas ideias e mudanças significativas.
+      Nossa missão é aproximar leitores de livros que merecem ser descobertos, com curadoria cuidadosa,
+      contexto e sugestões organizadas para tornar cada jornada de leitura mais acessível e inspiradora.
+    </p>
+  </section>
+
+  <section class="contributors-section" aria-labelledby="contributors-heading">
+    <div class="contributors-heading">
+      <p>Uma comunidade de leitores</p>
+      <h2 id="contributors-heading">Idealizadores e colaboradores</h2>
+      <span>Leitores que compartilham sugestões e ajudam a ampliar nossa curadoria.</span>
+    </div>
+    <div class="contributors-grid">
+      @for (colaborador of colaboradores; track colaborador.nome) {
+        <article class="contributor-card">
+          <img [src]="colaborador.foto" [alt]="'Foto de ' + colaborador.nome" loading="lazy">
+          <h3>{{ colaborador.nome }}</h3>
+          <p>{{ colaborador.bio }}</p>
+        </article>
+      }
+    </div>
+  </section>
+</section>

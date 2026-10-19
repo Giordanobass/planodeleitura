@@ -1,0 +1,18 @@
+<div class="combo-grid">
+  @for (combo of combos(); track combo.id) {
+    <article class="combo-card">
+      <a class="combo-card__link" [routerLink]="['/combo', combo.id]">
+        <h2>{{ combo.titulo }}</h2>
+        <p>{{ combo.descricao }}</p>
+        <div class="combo-covers" aria-label="Capas em destaque">
+          @for (imagem of combo.imagens; track $index) {
+            <span class="combo-cover">
+              <img [src]="imagem" [alt]="'Capa de livro do combo ' + combo.titulo" loading="lazy">
+            </span>
+          }
+        </div>
+        <span class="combo-card__action">Explorar combo <span aria-hidden="true">→</span></span>
+      </a>
+    </article>
+  }
+</div>

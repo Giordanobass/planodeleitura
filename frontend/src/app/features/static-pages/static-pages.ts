@@ -7,18 +7,6 @@ import { Component } from '@angular/core';
 export class ArtigosComponent {}
 
 @Component({
-  selector: 'app-podcast',
-  template: '<section class="page-container simple-page"><h1>Podcast</h1></section>',
-})
-export class PodcastComponent {}
-
-@Component({
-  selector: 'app-sobre',
-  template: '<section class="page-container simple-page"><h1>Sobre</h1></section>',
-})
-export class SobreComponent {}
-
-@Component({
   selector: 'app-contato',
   template: '<section class="page-container simple-page"><h1>Contato</h1></section>',
 })

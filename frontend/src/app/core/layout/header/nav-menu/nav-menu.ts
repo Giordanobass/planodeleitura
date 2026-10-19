@@ -17,7 +17,7 @@ export class NavMenu {
     readonly menuItems: MenuItem[] = [
         { label: 'Início', route: '/' },
         { label: 'Artigos', route: '/artigos' },
-        { label: 'Podcast', route: '/podcast' },
+        { label: 'Galeria', route: '/galeria' },
         { label: 'Planos de Leitura', route: '/planos' },
         { label: 'Sobre', route: '/sobre' },
         { label: 'Contato', route: '/contato' },

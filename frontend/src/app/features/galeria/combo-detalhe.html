@@ -1,0 +1,32 @@
+<section class="page-container combo-detail">
+  @if (combo; as selectedCombo) {
+    <header class="combo-detail__heading">
+      <p>Combo de livros</p>
+      <h1>{{ selectedCombo.titulo }}</h1>
+    </header>
+    <div class="book-list">
+      @for (livro of livros; track livro.id) {
+        <article class="book-item">
+          <img class="book-item__cover" [src]="livro.imagemCapa" [alt]="'Capa de ' + livro.titulo">
+          <div class="book-item__content">
+            <h2>{{ livro.titulo }}</h2>
+            <p class="book-item__author">por {{ livro.autor }}</p>
+            <p class="book-item__summary">{{ livro.resumo }}</p>
+            <a
+              class="buy-button"
+              [href]="livro.linkAfiliado"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Comprar</a>
+          </div>
+        </article>
+      }
+    </div>
+  } @else {
+    <section class="combo-not-found">
+      <h1>Combo não encontrado</h1>
+      <p>Este combo ainda não está disponível.</p>
+      <a routerLink="/galeria">Voltar para a galeria</a>
+    </section>
+  }
+</section>

@@ -1,0 +1,31 @@
+.gallery-page {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.gallery-heading {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.gallery-heading > p {
+  margin: 0 0 0.5rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.gallery-heading h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+}
+
+.gallery-heading > span {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--color-text-secondary);
+}
