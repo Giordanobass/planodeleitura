@@ -15,6 +15,7 @@
   width: auto;
   object-fit: contain;
   margin-right: 12px;
+  background-color: transparent;
   font-size: 0;
   color: transparent;
 }
