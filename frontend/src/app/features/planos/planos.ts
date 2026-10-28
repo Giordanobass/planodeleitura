@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PlanoTempo } from './plano-tempo';
-import { PLANOS_TEMPO } from './planos-tempo.data';
+import { PLANOS_LEITURA } from './planos.data';
+import { PlanoLeitura } from './plano-leitura';
 
 @Component({
   selector: 'app-planos',
@@ -8,5 +8,5 @@ import { PLANOS_TEMPO } from './planos-tempo.data';
   styleUrl: './planos.css',
 })
 export class PlanosComponent {
-  readonly planos: PlanoTempo[] = PLANOS_TEMPO;
+  readonly planos: PlanoLeitura[] = PLANOS_LEITURA;
 }

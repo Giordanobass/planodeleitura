@@ -15,7 +15,7 @@
 
 .combo-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgb(44 44 44 / 12%);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .combo-card__link {
@@ -56,7 +56,7 @@
   overflow: hidden;
   border-radius: 3px;
   background: var(--color-bg);
-  box-shadow: 0 3px 8px rgb(44 44 44 / 16%);
+  box-shadow: var(--shadow-book);
 }
 
 .combo-cover img {

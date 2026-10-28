@@ -6,12 +6,15 @@
   --color-text-secondary: #6B6B6B;
   --color-accent: #1A5276;
   --color-accent-hover: #0E3A52;
+  --color-error: #B42318;
   --color-border: #E8E2D9;
   --font-serif: Georgia, 'Times New Roman', serif;
   --font-sans: Inter, system-ui, sans-serif;
   --radius-card: 8px;
   --radius-button: 4px;
   --shadow-card: 0 2px 8px rgb(0 0 0 / 6%);
+  --shadow-card-hover: 0 8px 20px rgb(44 44 44 / 12%);
+  --shadow-book: 0 3px 8px rgb(44 44 44 / 16%);
 }
 
 * {

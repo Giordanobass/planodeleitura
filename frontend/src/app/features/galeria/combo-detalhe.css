@@ -49,7 +49,7 @@
   border-radius: 4px;
   background: var(--color-bg);
   object-fit: cover;
-  box-shadow: 0 3px 10px rgb(44 44 44 / 15%);
+  box-shadow: var(--shadow-book);
 }
 
 .book-item__content {

@@ -56,7 +56,7 @@ describe('App', () => {
     expect(purchaseLink?.getAttribute('rel')).toBe('noopener noreferrer');
   });
 
-  it('should show reading schedules based on available time', async () => {
+  it('should show detailed reading plans with steps', async () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     await TestBed.inject(Router).navigateByUrl('/planos');
@@ -64,7 +64,8 @@ describe('App', () => {
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelectorAll('.time-plan-card')).toHaveLength(3);
-    expect(compiled.textContent).toContain('30 min por dia');
+    expect(compiled.querySelectorAll('.reading-plan-card')).toHaveLength(12);
+    expect(compiled.textContent).toContain('30 minutos por dia');
+    expect(compiled.querySelectorAll('.reading-plan-card__steps li').length).toBeGreaterThanOrEqual(36);
   });
 });

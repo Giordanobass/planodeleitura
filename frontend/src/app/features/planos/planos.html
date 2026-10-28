@@ -4,12 +4,22 @@
     <h1>Planos de leitura</h1>
     <p>Escolha um ritmo possível para você e transforme alguns minutos do dia em uma nova descoberta.</p>
   </header>
-  <div class="time-plan-grid">
+  <div class="reading-plan-grid">
     @for (plano of planos; track plano.id) {
-      <article class="time-plan-card">
-        <p class="time-plan-card__time">{{ plano.tempoDiario }}</p>
-        <h2>{{ plano.titulo }}</h2>
-        <p class="time-plan-card__description">{{ plano.descricao }}</p>
+      <article class="reading-plan-card">
+        <h2 class="reading-plan-card__title">{{ plano.titulo }}</h2>
+        <div class="reading-plan-card__badges">
+          <span class="plan-badge"><span aria-hidden="true">◷</span> {{ plano.tempoDiario }}</span>
+          <span class="plan-badge"><span aria-hidden="true">◎</span> {{ plano.publicoAlvo }}</span>
+        </div>
+        <p class="reading-plan-card__objective"><strong>Objetivo:</strong> {{ plano.objetivo }}</p>
+        <p class="reading-plan-card__description">{{ plano.descricao }}</p>
+        <h3>Como colocar em prática</h3>
+        <ol class="reading-plan-card__steps">
+          @for (passo of plano.passos; track $index) {
+            <li>{{ passo }}</li>
+          }
+        </ol>
       </article>
     }
   </div>

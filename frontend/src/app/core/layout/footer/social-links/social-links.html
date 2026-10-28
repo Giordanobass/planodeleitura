@@ -1,1 +1,9 @@
-<p>social-links works!</p>
+<section class="share-links" aria-labelledby="share-heading">
+  <h2 id="share-heading">Compartilhe a leitura</h2>
+  <p>Convide outras pessoas a descobrir novas ideias por meio dos livros.</p>
+  <ul>
+    @for (link of links; track link.label) {
+      <li><a [href]="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a></li>
+    }
+  </ul>
+</section>

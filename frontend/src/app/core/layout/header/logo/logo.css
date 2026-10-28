@@ -1,25 +1,22 @@
 .brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.65rem;
   color: var(--color-text);
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.brand__mark {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--color-accent);
-  color: var(--color-surface);
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
+.site-logo-icon {
+  display: block;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 12px;
+  font-size: 0;
+  color: transparent;
 }
 
 .brand:hover {
