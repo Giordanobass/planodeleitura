@@ -2,33 +2,6 @@ import { ComboLivro, Livro } from './combo-livro';
 
 const cover = (isbn: string): string => `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`;
 
-export const COMBOS_LIVROS: ComboLivro[] = [
-  {
-    id: 'financas',
-    titulo: 'Finanças para aprender a ganhar dinheiro',
-    descricao: 'Leituras para compreender dinheiro, investir com consciência e construir prosperidade.',
-    imagens: [cover('9781612680194'), cover('8595080801'), cover('9896945314')],
-  },
-  {
-    id: 'filosofia-ateus',
-    titulo: 'Filosofia para ateus',
-    descricao: 'Ideias e argumentos para explorar o pensamento secular, a ética e o sentido da vida.',
-    imagens: [cover('8552100665'), cover('8535914560'), cover('9780679731184')],
-  },
-  {
-    id: 'filosofia-fe',
-    titulo: 'Filosofia para crer em Deus',
-    descricao: 'Autores que investigam fé, razão e as grandes questões sobre a existência.',
-    imagens: [cover('8578601777'), cover('8573678518'), cover('9780199552730')],
-  },
-  {
-    id: 'habitos',
-    titulo: 'Hábitos para uma vida com propósito',
-    descricao: 'Um conjunto de livros sobre escolhas, atenção e mudanças duradouras.',
-    imagens: [cover('8550807567'), cover('8539004119'), cover('9781501124020')],
-  },
-];
-
 export const LIVROS_POR_COMBO: Record<string, Livro[]> = {
   financas: [
     {
@@ -111,3 +84,30 @@ export const LIVROS_POR_COMBO: Record<string, Livro[]> = {
     },
   ],
 };
+
+export const COMBOS_LIVROS: ComboLivro[] = [
+  {
+    id: 'financas',
+    titulo: 'Finanças para aprender a ganhar dinheiro',
+    descricao: 'Leituras para compreender dinheiro, investir com consciência e construir prosperidade.',
+    imagens: LIVROS_POR_COMBO['financas'].map((livro) => livro.imagemCapa),
+  },
+  {
+    id: 'filosofia-ateus',
+    titulo: 'Filosofia para ateus',
+    descricao: 'Ideias e argumentos para explorar o pensamento secular, a ética e o sentido da vida.',
+    imagens: LIVROS_POR_COMBO['filosofia-ateus'].map((livro) => livro.imagemCapa),
+  },
+  {
+    id: 'filosofia-fe',
+    titulo: 'Filosofia para crer em Deus',
+    descricao: 'Autores que investigam fé, razão e as grandes questões sobre a existência.',
+    imagens: LIVROS_POR_COMBO['filosofia-fe'].map((livro) => livro.imagemCapa),
+  },
+  {
+    id: 'habitos',
+    titulo: 'Hábitos para uma vida com propósito',
+    descricao: 'Um conjunto de livros sobre escolhas, atenção e mudanças duradouras.',
+    imagens: LIVROS_POR_COMBO['habitos'].map((livro) => livro.imagemCapa),
+  },
+];

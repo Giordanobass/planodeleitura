@@ -7,7 +7,7 @@
         <div class="combo-covers" aria-label="Capas em destaque">
           @for (imagem of combo.imagens; track $index) {
             <span class="combo-cover">
-              <img [src]="imagem" [alt]="'Capa de livro do combo ' + combo.titulo" loading="lazy">
+              <img [src]="imagem" [alt]="'Capa do livro do combo ' + combo.titulo" loading="lazy">
             </span>
           }
         </div>

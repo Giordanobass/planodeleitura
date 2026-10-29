@@ -38,6 +38,12 @@ describe('App', () => {
 
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelectorAll('.combo-card')).toHaveLength(4);
+    expect(compiled.querySelectorAll('.combo-cover img')).toHaveLength(9);
+    expect(
+      Array.from(compiled.querySelectorAll<HTMLImageElement>('.combo-cover img')).every(
+        (image) => image.getAttribute('src'),
+      ),
+    ).toBe(true);
     expect(compiled.querySelector('h1')?.textContent).toContain('Galeria');
   });
 
@@ -52,6 +58,9 @@ describe('App', () => {
     const purchaseLink = compiled.querySelector('.buy-button');
     expect(compiled.querySelector('h1')?.textContent).toContain('Finanças');
     expect(compiled.querySelectorAll('.book-item')).toHaveLength(3);
+    expect(compiled.querySelector('.book-item__cover')?.getAttribute('alt')).toBe(
+      'Capa do livro O homem mais rico da Babilônia',
+    );
     expect(purchaseLink?.getAttribute('target')).toBe('_blank');
     expect(purchaseLink?.getAttribute('rel')).toBe('noopener noreferrer');
   });

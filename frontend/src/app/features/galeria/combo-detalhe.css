@@ -47,7 +47,7 @@
   width: 200px;
   height: 290px;
   border-radius: 4px;
-  background: var(--color-bg);
+  background-color: #f0f0f0;
   object-fit: cover;
   box-shadow: var(--shadow-book);
 }
