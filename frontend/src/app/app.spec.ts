@@ -73,8 +73,10 @@ describe('App', () => {
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelectorAll('.reading-plan-card')).toHaveLength(12);
+    expect(compiled.querySelectorAll('.reading-plan-card')).toHaveLength(24);
     expect(compiled.textContent).toContain('30 minutos por dia');
-    expect(compiled.querySelectorAll('.reading-plan-card__steps li').length).toBeGreaterThanOrEqual(36);
+    expect(compiled.textContent).toContain('Pílulas de Sabedoria');
+    expect(compiled.textContent).toContain('Maratona de Fim de Semana');
+    expect(compiled.querySelectorAll('.reading-plan-card__steps li').length).toBeGreaterThanOrEqual(84);
   });
 });
